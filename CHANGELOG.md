@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+- Support literal pipe characters in table cells. Renderer escapes backslashes
+  and pipes; parser unescapes them, so cells round-trip without changing table
+  structure. A backslash before any other character stays literal, preserving
+  existing hand-written input.
+
 ## 0.4.2 (sample baseline)
 
 - Validate rectangular tables and single-line string cells.
